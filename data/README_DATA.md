@@ -1,6 +1,6 @@
 # Carpeta `data/`
 
-Aquí se ubicaría el dataset utilizado en este proyecto: **Employee_churn.csv**.  
+Aquí se ubicaría el dataset utilizado en este proyecto: **Rotacion_empleados.csv**.  
 
 ⚠️ El archivo CSV fue aportado por una institución privada con fines educativos, por lo que **no se incluye en este repositorio público**.   
 
