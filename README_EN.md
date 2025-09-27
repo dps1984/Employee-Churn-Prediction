@@ -10,7 +10,6 @@ The goal is to predict which employees are most likely to leave the company, sup
 ## 📂 Project Structure
 - `notebooks/` → contains the main notebook with step-by-step analysis.  
 - `data/` → datasets used (not included in public repo for privacy reasons).  
-- `output/` → generated results and figures.  
 
 ---
 
