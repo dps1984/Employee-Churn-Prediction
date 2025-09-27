@@ -31,13 +31,14 @@ The goal is to predict which employees are most likely to leave the company, sup
 | Logistic Regression | 0.51      | 0.81   | 0.62 | 0.83    | 0.48   |
 | Random Forest       | 0.99      | 0.98   | 0.98 | 1.00    | 0.99   |
 
----
-
 ## 🚀 Takeaways
-- **Logistic Regression** provides a good trade-off between interpretability and performance as a baseline.  
-- **Random Forest** significantly improves metrics, showing near-perfect performance on the test set.  
-- In a real-world context, the choice depends on the trade-off between **precision**, **recall**, and the need for **explainability** versus model complexity.  
-
+- **Logistic Regression** provides a solid baseline with good interpretability.
+- **Random Forest** significantly boosts metrics (near-perfect on test).
+- ⚠️ Such high RF scores may indicate **overfitting**. In practice:
+  - Validate on an external/temporal hold-out (or recent data).
+  - Constrain complexity (depth, `min_samples_*`) and/or apply regularization.
+  - Compare stability against simpler models (e.g., Logistic Regression).
+- Final choice depends on the **precision–recall trade-off** and the **explainability** required by stakeholders.
 ---
 
 ## 📫 Contact
