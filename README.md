@@ -9,8 +9,7 @@ El objetivo es predecir qué empleados tienen mayor probabilidad de abandonar la
 
 ## 📂 Estructura del proyecto
 - `notebooks/` → contiene el notebook principal con el análisis paso a paso.  
-- `data/` → datasets utilizados (no incluidos en el repo público por privacidad).  
-- `output/` → resultados y gráficas generadas.  
+- `data/` → datasets utilizados (no incluidos en el repo público por privacidad).   
 
 ---
 
