@@ -1,43 +1,50 @@
-# Predicción de Churn de Empleados
+# Predicción de Rotación de Empleados
 
-**[English Version](README_EN.md)**  
+**[English Version](README.md)**  
 
-Este proyecto aborda el problema de la **rotación de empleados** (employee churn) mediante modelos de *Machine Learning*.  
-El objetivo es predecir qué empleados tienen mayor probabilidad de abandonar la empresa, ayudando así a los equipos de Recursos Humanos a tomar decisiones proactivas.
+Este proyecto aborda el problema de la **rotación de empleados** mediante el uso de modelos de *Machine Learning*.  
+El objetivo es predecir qué empleados tienen mayor probabilidad de abandonar la compañía, ayudando a los equipos de RRHH a tomar decisiones proactivas.
 
 ---
 
-## 📂 Estructura del proyecto
+## 🧠 Contexto de Negocio
+
+La rotación de empleados tiene un impacto directo en la continuidad operativa, el rendimiento de los equipos y los costes de reclutamiento.
+Este proyecto explora cómo los insights basados en datos pueden ayudar a los equipos de RRHH a identificar empleados en riesgo de salida de forma temprana y priorizar acciones de retención.
+
+---
+
+## 📂 Estructura del Proyecto
 - `notebooks/` → contiene el notebook principal con el análisis paso a paso.  
-- `data/` → datasets utilizados (no incluidos en el repo público por privacidad).   
+- `data/` → datasets utilizados (no incluidos en el repositorio público por motivos de privacidad).  
 
 ---
 
-## ⚙️ Flujo de trabajo
-1. **Exploración e inspección de datos**: estructura, tipos de variables y balance de clases.  
-2. **Preprocesado**: escalado de variables numéricas y codificación *one-hot* de variables categóricas.  
+## ⚙️ Flujo de Trabajo
+1. **Exploración de datos**: estructura, tipos de variables y balance de clases.  
+2. **Preprocesado**: escalado de variables numéricas y one-hot encoding de variables categóricas.  
 3. **Modelado**:  
    - Regresión Logística (modelo base).  
-   - Random Forest (modelo comparativo).  
-4. **Evaluación**: métricas F1, ROC AUC, PR AUC, matriz de confusión y análisis de umbrales.  
-5. **Conclusiones de negocio** (*takeaways*).  
+   - Random Forest (modelo de referencia).  
+4. **Evaluación**: F1 score, ROC AUC, PR AUC, matriz de confusión y análisis de umbrales.  
+5. **Conclusiones orientadas a negocio**.  
 
 ---
 
-## 📊 Resultados destacados
+## 📊 Resultados Clave
 | Modelo              | Precisión | Recall | F1   | ROC AUC | PR AUC |
 |---------------------|-----------|--------|------|---------|--------|
 | Regresión Logística | 0.51      | 0.81   | 0.62 | 0.83    | 0.48   |
 | Random Forest       | 0.99      | 0.98   | 0.98 | 1.00    | 0.99   |
 
-## 🚀 Takeaways
-- La **Regresión Logística** ofrece buen equilibrio entre interpretabilidad y rendimiento base.
-- **Random Forest** eleva notablemente las métricas (casi perfecto en test).
-- ⚠️ Métricas tan altas en RF pueden sugerir **overfitting**. En un caso real:
-  - Validar en un conjunto externo/temporal (hold-out o datos recientes).
-  - Limitar complejidad (profundidad, `min_samples_*`) y/o usar regularización.
-  - Comparar estabilidad con modelos más simples (p. ej., Regresión Logística).
-- La elección depende del **trade-off** precisión vs. recall y de la **explicabilidad** requerida por negocio.
+🚀 Conclusiones
+- La Regresión Logística proporciona un modelo base sólido e interpretable, adecuado para su discusión con stakeholders.
+- Random Forest mejora significativamente el rendimiento predictivo, pero requiere una validación cuidadosa antes de su uso en contextos reales.
+
+⚠️ Consideraciones importantes:
+- Métricas tan altas en Random Forest pueden indicar overfitting.
+- En un entorno real, los modelos deberían validarse con datos temporales o conjuntos externos.
+- La selección del modelo debe equilibrar capacidad predictiva, estabilidad y nivel de explicabilidad, según las necesidades del negocio.
 
 ---
 
